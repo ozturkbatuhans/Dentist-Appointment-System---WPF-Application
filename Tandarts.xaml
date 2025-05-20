@@ -1,0 +1,57 @@
+﻿<Window x:Class="Ozturk_Batuhan_PE1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ozturk_Batuhan_PE1"
+        mc:Ignorable="d"
+        Title="Tandarts" Height="600" Width="1200">
+    <Grid>
+        <GroupBox Header="Maken afspraak tandarts" Margin="0,0,832,433" >
+            <Canvas>
+                <Label Content="Voornaam:" Canvas.Left="26" Canvas.Top="10"/>
+                <Label Content="Familienaam:" Canvas.Left="26" Canvas.Top="53"/>
+                <TextBox x:Name="txtLastName" Canvas.Left="127" Canvas.Top="14" Text="" TextWrapping="Wrap" Width="120"/>
+                <TextBox x:Name="txtFistName" Canvas.Left="127" Canvas.Top="61" Text="" TextWrapping="Wrap" Width="120"/>
+                <Button x:Name="btnRegistration" Content="maken afspraak" Canvas.Left="127" Canvas.Top="89" Click="btnRegistration_Click"
+HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Header="Aanmelden op secretariaat" Margin="368,0,504,415">
+            <Canvas>
+                <Label Content="Voornaam:" Canvas.Left="26" Canvas.Top="10"/>
+                <Label Content="Familienaam:" Canvas.Left="26" Canvas.Top="53"/>
+                <TextBox x:Name="txtLastName1" Canvas.Left="127" Canvas.Top="14" Text="" TextWrapping="Wrap" Width="120"/>
+                <TextBox x:Name="txtFistName1" Canvas.Left="127" Canvas.Top="61" Text="" TextWrapping="Wrap" Width="120"/>
+                <Button x:Name="btnAanmelding" Content="Aanmelden" Canvas.Left="118" Canvas.Top="99" Click="btnAanmelding_Click"/>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Header="Overzicht wachtende patienten" Margin="368,176,504,248">
+            <ListBox x:Name="lstAanmelding" />
+        </GroupBox>
+        <GroupBox Header="Overzicht geregistreerde patienten" Margin="32,176,837,248">
+            <ListBox x:Name="lstAfsrpaak" ></ListBox>
+        </GroupBox>
+        <GroupBox x:Name="gpbSollicitatie" Header="Bij de tandarts" Margin="731,10,33,415">
+            <Canvas>
+                <Button x:Name="btnAfronden" Content="afronden afspraak" Canvas.Left="255" Canvas.Top="30" Click="btnAfronden_Click"/>
+                <CheckBox x:Name="chkGaatjes" Content="Gaatjes in tand/tanden" Canvas.Left="14" Canvas.Top="59" RenderTransformOrigin="0.301,
+-0.658" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <CheckBox x:Name="chkReinigen" Content="Reinigen van de tanden" Canvas.Left="11" Canvas.Top="93" RenderTransformOrigin="
+0.245,0.799" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="Patient naam:" Canvas.Left="14" Canvas.Top="24"/>
+                <Label x:Name="lblPatientNaam" Content="" Canvas.Left="101" Canvas.Top="24" HorizontalAlignment="Center" VerticalAlignment="
+Top"/>
+            </Canvas>
+        </GroupBox>
+        <Button x:Name="btnGaNaarTandarts" Content="Ga naar Tandarts" HorizontalAlignment="Left" Margin="382,358,0,0" VerticalAlignment="Top"
+RenderTransformOrigin="-0.114,-0.324" Click="btnGaNaarTandarts_Click" />
+        <GroupBox x:Name="gpbPatienten" Header="Overzicht patienten" Margin="731,192,33,261">
+            <StackPanel>
+                <Label Content="Patient"/>
+                <ComboBox x:Name="cmbPatienten" Width="120" SelectionChanged="cmbPatienten_SelectionChanged" />
+                <Label x:Name="lblResult" Content="Label"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
